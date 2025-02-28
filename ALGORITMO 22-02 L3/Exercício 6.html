@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculadora Básica</h1>
+    <p>Informe o <b>1º algarismo</b></p>
+    <input type="number" name="" id="ipt_n1">
+    <p>Informe o <b>2º algarismo</b></p>
+    <input type="number" name="" id="ipt_n2">
+    <br><br>
+    <button onclick="calculo()"><b>Calcular</b></button>
+    <br><br>
+    <div id="mensagem"></div>
+
+</body>
+
+</html>
+<script>
+    function calculo() {
+        var soma = Number(ipt_n1.value) + Number(ipt_n2.value)
+        var subt = Number(ipt_n1.value) - Number(ipt_n2.value)
+        var mult = Number(ipt_n1.value) * Number(ipt_n2.value)
+        var divi = Number(ipt_n1.value) / Number(ipt_n2.value)
+        mensagem.innerHTML = `A soma entre ${ipt_n1.value} e ${ipt_n2.value} é <b>${soma}</b> <br><br>
+        A subtração entre ${ipt_n1.value} e ${ipt_n2.value} é <b>${subt}</b><br><br>
+        A multiplicação entre ${ipt_n1.value} e ${ipt_n2.value} é <b>${mult.toFixed(2)}</b><br><br>
+        A divisão entre ${ipt_n1.value} e ${ipt_n2.value} é <b>${divi.toFixed(2)}</b><br>`
+    }
+
+</script>
+
+<!-- A soma entre X e Y é Z" -->
+<!-- "A diferença entre X e Y é Z" -->
+<!-- "O produto entre X e Y é Z" -->
+<!-- "A razão entre X e Y é Z" -->

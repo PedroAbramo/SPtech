@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta de energia</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p>Informe a quantidade de KWh consumida no mês</p>
+    <input type="number" name="" id="ipt_kwh">
+    <br>
+    <button onclick="calculo()"><b>Calcular conta de luz</b></button>
+</body>
+</html>
+<script>
+function calculo(){
+    var conta = (Number(ipt_kwh.value) * 0.85)
+    var qtdKWh = Number(ipt_kwh.value)
+
+    if (qtdKWh < 100){
+var desconto = (conta.toFixed(2) * 0.9)
+alert(`O valor da conta a ser pago será de R$${desconto.toFixed(2)}`)
+    }
+    else {alert(`O valor da conta a ser pago será de R$${conta}`)}  
+}
+</script>

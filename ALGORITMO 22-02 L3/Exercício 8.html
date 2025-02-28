@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depósito/retirada</title>
+</head>
+<body>
+
+    <p>Valor a ser solicitado/retirado</p>
+    <input type="number" id="ipt_valor">
+    <button onclick="depositar()">Depositar</button>
+    <button onclick="retirar()">Retirar</button>
+    <br><br>
+    <div id="div_saldo"></div>
+
+</body>
+</html>
+
+<script>
+
+    var saldo = Number(0)
+
+    function depositar(){
+        var valorDepositado = Number(ipt_valor.value)
+        saldo += valorDepositado
+        div_saldo.innerHTML = `Depósito de R$ ${valorDepositado.toFixed(2)} efetuado! Saldo atual: R$ ${saldo}`
+    }
+
+    // O ".toFixed" serve para mostrar as casas decimais. Ex: "${valorDepositado.toFixed(2)}"
+
+    function retirar(){
+        var valorDepositado = Number(ipt_valor.value)
+        saldo -= valorDepositado
+        alert("Retirada de R$" + valorDepositado + " efetuado! Saldo atual: R$" + saldo)
+    }
+
+</script>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré AC</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+    </style>    
+</head>
+
+<body>
+    <h2>Calculo dos encargos</h2>
+    <p>Informe o seu sálario mensal:</p>
+    <input type="number" name="" id="ipt_salario">
+
+        <p>Informe o seu adicional mensal:</p>
+        <input type="number" name="" id="ipt_adicional">
+
+            <p>Informe o seu bônus:</p>
+            <input type="number" name="" id="ipt_bonus">
+            <br><br>
+                
+                <button onclick="calculo()"><b>Analisar minha renda</b></button>
+                <br>
+                <div id="div_mensagem"></div>
+                <br>
+                <div id="div_mensagem2"></div>
+</body>
+
+</html>
+
+<script>
+
+    function calculo(){
+        var salarioMensal = Number(ipt_salario.value)
+        var adicional = Number(ipt_adicional.value)
+        var bonus = Number(ipt_bonus.value)
+        var salarioBruto = salarioMensal + adicional + bonus
+
+        if(salarioBruto >= 10000){
+            var descontoIR = salarioBruto - (salarioBruto * 0.875) // Valor desconto IR
+            var Sal_SemIR = salarioBruto - descontoIR
+
+            var descontoINSS = Sal_SemIR - (Sal_SemIR * 0.9) // Valor desconto INSS
+            var Sal_SemINSS = Sal_SemIR - descontoINSS 
+
+            var descontoFGTS = Sal_SemIR - (Sal_SemIR * 0.92) // Valor desconto FGTS
+            var salarioLiquido = salarioBruto - descontoIR - descontoINSS - descontoFGTS
+         
+            div_mensagem.innerHTML = `
+            ANÁLISE DA SUA RENDA <br><br>
+            Com o salário de R$${salarioMensal.toFixed(2)}, com adicional de R$${adicional.toFixed(2)} e bônus de R$${bonus.toFixed(2)}, você tem: <br>
+            Bruto: R$${salarioBruto.toFixed(2)}  <br>
+            IR: R$${descontoIR.toFixed(2)}  <br>
+            INSS: R$${descontoINSS.toFixed(2)}  <br>
+            FGTS: R$${descontoFGTS.toFixed(2)} <br>
+            Líquido: R$${salarioLiquido.toFixed(2)}`
+            console.log('teste1')
+
+        } if (salarioLiquido > 2500){
+            var QUINZEliquid = salarioLiquido * 0.15
+            var UMano = QUINZEliquid * 12
+
+            div_mensagem2.innerHTML = `
+            Com a renda de R$${salarioLiquido.toFixed(2)}, é recomendado poupar R$${QUINZEliquid.toFixed(2)}, para que em um ano tenha poupado R$${UMano.toFixed(2)}`
+            console.log('teste2')
+            }
+
+             if(salarioBruto < 10000){
+            var DESCONTOinss = salarioBruto - (salarioBruto * 0.9) // Desconto INSS
+          
+            var DESCONTOfgts = salarioBruto - (salarioBruto * 0.92) // Desconto FGTS
+            
+            var SALARIOliquido = salarioBruto - DESCONTOinss - DESCONTOfgts // Salario liquido
+
+            div_mensagem.innerHTML = `
+            ANÁLISE DA SUA RENDA <br><br>
+            Com o salário de R$${salarioMensal.toFixed(2)}, com adicional de R$${adicional.toFixed(2)} e bônus de R$${bonus.toFixed(2)}, você tem: <br>
+            Bruto: R$${salarioBruto.toFixed(2)}  <br>
+            IR: R$0  <br>
+            INSS: R$${DESCONTOinss.toFixed(2)}  <br>
+            FGTS: R$${DESCONTOfgts.toFixed(2)} <br>
+            Líquido: R$${SALARIOliquido.toFixed(2)}`
+            console.log('teste3')
+
+        } if (SALARIOliquido > 2500){
+            var quinze = SALARIOliquido * 0.15
+            var ANO = quinze * 12
+            div_mensagem2.innerHTML = `
+            Com a renda de R$${SALARIOliquido.toFixed(2)}, é recomendado poupar R$${quinze.toFixed(2)}, para que em um ano tenha poupado R$${ANO.toFixed(2)}`
+            console.log('teste4')
+            } 
+            if (SALARIOliquido <= 2500){
+                div_mensagem2.innerHTML = `Com a renda de R$${SALARIOliquido.toFixed(2)}, é recomendado obter renda extra para realizar uma poupança`
+                }
+
+    }
+
+
+
+</script>

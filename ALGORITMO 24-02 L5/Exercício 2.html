@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Informe a renda familiar</h1>
+    <input type="number" name="" id="ipt_renda">
+    <button onclick="calculo()">Analisar renda</button>
+        <br><br>
+            <div id="div_mensagem"></div>
+</body>
+
+</html>
+
+<script>
+    function calculo(){
+        var renda = Number(ipt_renda.value)
+        if(renda <= 250){
+            div_mensagem.innerHTML = `CLASSE E`
+        } else if(renda <=900){
+            div_mensagem.innerHTML = `CLASSE D`
+        }
+         else if(renda <=2500){
+            div_mensagem.innerHTML = `CLASSE C`
+        }
+         else if(renda <=9500){
+            div_mensagem.innerHTML = `CLASSE B`
+        } else{div_mensagem.innerHTML = `CLASSE A`}
+        
+    }
+</script>
+
+
+<!--"Classe E" (até 250) 
+
+   "Classe D" (+250 até 900) 
+
+   "Classe C" (+900 até 2500) 
+
+   "Classe B" (+2500 até 9500) 
+
+   "Classe A" (+9500) -->
+
+
+

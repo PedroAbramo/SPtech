@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagar/Receber</title>
+</head>
+<body>
+
+    <button onclick="receber()">Receber 100</button>
+    <button onclick="pagar()">Pagar 50</button>
+    <div id="div_exibir"></div>
+    
+</body>
+</html>
+
+<!-- innerHTML é usado para exibir uma informação na página -->
+
+<script>
+
+var saldo = 0 
+
+function receber(){
+    saldo = saldo + 100
+    div_exibir.innerHTML = "Transferência de R$100 recebida! Saldo atual: " + saldo
+}
+
+function pagar(){
+saldo = saldo - 50
+div_exibir.innerHTML = "Transferência de R$50 recebida! Saldo atual: " + saldo
+
+}
+
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sono</title>
+</head>
+<body>
+
+    <p>Informe quantas horas você teve de sono:</p>
+    <input type="Number" id="ipt_horasono">
+    <button onclick="calculo_sono()"><b>Calcular sono</b></button>
+    <br><br>
+    <div id="div_horasono"></div>
+
+</body>
+
+</html>
+
+<script>
+
+function calculo_sono(){
+    var horasdesono = Number(ipt_horasono.value)
+    var fase1 = Number(horasdesono * 0.05)
+    var fase2 = Number(horasdesono * 0.45)
+    var fase3 = Number(horasdesono * 0.30)
+    var faseREM = Number(horasdesono * 0.2)
+
+    div_horasono.innerHTML = `Ao dormir ${horasdesono} horas, você dormiu: </br>
+        ${fase1} horas na fase 1 </br>
+        ${fase2} horas na fase 2 </br>
+        ${fase3} horas na fase 3 </br>
+        ${faseREM} horas na fase REM`
+}
+</script>

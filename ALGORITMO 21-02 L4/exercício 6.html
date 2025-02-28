@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Informe o valor da renda familiar:</p>
+    <input type="number" name="" id="ipt_renda">
+    <p>Informe o valor da prestação:</p>
+    <input type="number" name="" id="ipt_prestacao">
+    <br><br>
+    <button onclick="calculo()"><b>Verificar financiamento</b></button>
+    <br>
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+function calculo(){
+    var porcentagem = ((Number(ipt_prestacao.value) / Number(ipt_renda.value)) * 100) 
+    mensagem.innerHTML = `A prestação corresponde a ${porcentagem}% da renda familiar`
+        if (porcentagem > 30){
+    mensagem.innerHTML += `<br><span style='color:red'> <b><i>Será necessário complementar a renda familiar</b></i>`
+        }
+}
+
+</script>

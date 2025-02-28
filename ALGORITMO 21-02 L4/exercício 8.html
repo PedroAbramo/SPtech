@@ -1,0 +1,39 @@
+<!-- a) Solicite a quantidade de homens que entraram no elevador 
+
+b) Solicite a quantidade de mulheres que entraram no elevador 
+
+c) Ao clicar em "Analisar peso", calcule o peso estimado sendo: homens x 80 somado com mulheres x 60 
+
+d) Exiba na página a mensagem "Este elevador suporta 800 Kg e o peso estimado desta lotação é de XXXkg"  
+
+e) Se o peso estimado for maior que 800, exibir também a mensagem "Será necessário que alguém desça para que o elevador se movimente" - na cor azul.   -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Informe a quanidade de homens que entraram no elevador</p>
+    <input type="number" id="ipt_qtdHomens">
+    <p>Informe a quantidade de mulheres que entraram no elevador</p>
+    <input type="number" name="" id="ipt_qtdMulher">
+    <br><br>
+    <button onclick="calculo()"><b>Analisar peso</b></button>
+    <br><br>
+    <div id="mensagem"></div>
+    
+</body>
+</html>
+<script>
+    function calculo(){
+        var pesoH = (Number(ipt_qtdHomens.value) * 80)
+        var pesoM = (Number(ipt_qtdMulher.value) * 60)
+        var pesoSomado = pesoH + pesoM
+        mensagem.innerHTML = `Este elevador suporta 800kg e o peso estimado desta lotação é de ${pesoSomado}kg`
+            if (pesoSomado > 800)
+            {mensagem.innerHTML += `<span style='color:blue'><br> Será necessário que alguém desça para que o elevador se movimente!`}
+    }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento</title>
+</head>
+<body>
+    <p>Qual o saldo em conta?</p>
+    <input type="number" id="ipt_saldo">
+    <p>Qual o valor a ser debitado</p>
+    <input type="number" name="" id="ipt_debito">
+    <button onclick="monitorar()">Analisar conta</button>
+
+    <div id="texto"></div>
+</body>
+</html>
+<script>
+    function monitorar(){
+        var saldo = Number(ipt_saldo.value);
+        var debito = Number(ipt_debito.value);
+
+        var resultado = saldo - debito;
+        if(resultado>=0){
+            texto.innerHTML = `<span style = "color: blue"> <i> O saldo atual da conta corrente é ${resultado}<i></span>`
+        }
+        else{
+             texto.innerHTML = `<span style = "color: red"> <b> O saldo atual da conta corrente é ${resultado}<b></span>`
+        }
+    }
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol</title>
+</head>
+<body>
+
+    <p>Insira o nome do <b>Time:</b></p>
+    <input id="ipt_nometime"/>
+
+    <p>Insira a quantidade de <b>Títulos:</b></p>
+    <input id="ipt_titulos"/>
+
+<br>
+<br>
+
+    <button onclick="mensagem()">Amo meu time!</button>
+
+</body>
+
+<img src="https://moodle.sptech.school/pluginfile.php/1/core_admin/logocompact/300x300/1739026086/logo-vazado-para-video.png" style="opacity: 0.5; display: block; margin: 0 auto;" alt="Logo SPtech">
+
+</html>
+
+<script>
+    function mensagem(){
+        alert("O time " + ipt_nometime.value + " tem " + ipt_titulos.value + " títulos");
+    }
+
+</script>

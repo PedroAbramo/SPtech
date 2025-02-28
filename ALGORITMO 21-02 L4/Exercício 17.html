@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Informe a frequência de sala</p>
+    <input type="number" name="" id="ipt_frequencia">
+    <br><br>
+    <button onclick="calculo()">Analisar frequência</button>
+    <div id="div_imagens"></div>
+
+   <img src="" alt="">
+</body>
+</html>
+<script>
+
+
+function calculo(){
+    var frequencia = Number(ipt_frequencia.value)
+                    if(frequencia < 50){
+                        div_imagens.innerHTML = ` <img src="https://www.gov.br/pt-br/perfil_usuario/turista/@@images/image" alt="">`
+                        console.log("TESTE")
+                    }
+                    else{
+                        div_imagens.innerHTML = `<img src="https://institutoinfantojuvenil.com.br/wp-content/uploads/2020/08/TOPO-ICIJ-38-scaled.jpg" alt="">`
+                        console.log("TESTE1")
+                    }
+}
+
+</script>

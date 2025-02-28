@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>informe sua meta de economia:</p>
+    <input type="number" name="" id="ipt_meta">
+        <p>Informe quanto você tem guardado:</p>
+        <input type="number" name="" id="ipt_guardado">
+            <br><br>
+        <button onclick="calculo()">Analisar economia</button>
+        <div id="div_mensagem"></div>
+</body>
+
+</html>
+
+<script>
+    function calculo(){
+        var meta = Number(ipt_meta.value)
+        var guardado = Number(ipt_guardado.value)
+        var diferença = guardado - meta
+        var falta = meta - guardado
+
+        if (meta==guardado){div_mensagem.innerHTML = `Parabéns, meta alcançada!`}
+            else if (meta<guardado){div_mensagem.innerHTML = `Meta ultrapassada em R$${diferença}`}
+                else if(meta>guardado){div_mensagem.innerHTML = `Força! Ainda em busca da meta! Faltam R$${falta}`}
+
+    }
+
+
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Informe o valor do seu saldo no banco:</p>
+    <input type="number" id="ipt_saldo">
+    <br><br>
+    <button onclick="calculo()">Verificar finanças</button>
+    <br><br>
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+
+function calculo(){
+    var saldo = Number(ipt_saldo.value)
+    if (saldo == 0)
+    {mensagem.innerHTML = `Conta zerada!`}
+    else {
+        if (saldo >= 1) {mensagem.innerHTML = `Saldo positio!`}
+            else {mensagem.innerHTML = mensagem.innetHTML = `<span style='color:red'>Está devendo`}
+    }
+}
+
+</script>

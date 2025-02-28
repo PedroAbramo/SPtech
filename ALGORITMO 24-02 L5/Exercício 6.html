@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Informe qual desses times você torce</h1>
+    <p>São Paulo, Corinthians, Palmeiras e Santos</p>
+    <input type="text" name="" id="ipt_time" list="list_opções">
+        <br><br>
+            <button onclick="calculo()">Fale desse time!</button>
+                <br><br>
+                    <div id="div_mensagem"></div>
+</body>
+
+<datalist id="list_opções">
+        <option value="Palmeiras">
+        <option value="Corinthians">
+        <option value="Santos">
+        <option value="São Paulo">
+</datalist>
+
+</html>
+<script>
+    function calculo(){
+        var time = ipt_time.value
+        if (time == 'Corinthians'){div_mensagem.innerHTML = `<span style = "background-color: black; color: white">Salve o Corinthians`} 
+            else if(time == 'Palmeiras'){div_mensagem.innerHTML = `<span style = "background-color: green; color: white">Salve o alviverde imponente`} 
+                else if(time == 'Santos'){div_mensagem.innerHTML = `<span style = "background-color: white; color: black">Agora quem dá a bola é o Santos`}
+                    else if(time == 'São Paulo'){div_mensagem.innerHTML = `<span style = "background-color: black; color: red">Salve o Tricolor paulista`}
+                        else{div_mensagem.innerHTML = `Escolha um time grande!`}
+    console.log("teste1")
+    }
+</script>
+
+
+
+
+<!-- `<span style = "color: green"> Elevador vai se mover, pois está com ${pesoTotal}kg` -->
+
+
+
+<!--    "Salve o Corinthians" -> com fundo preto e letra branca, se for Corinthians 
+   "Salve o alviverde imponente" -> com fundo verde e letra branca, se for Palmeiras 
+   "Agora quem dá a bola é o Santos" -> com fundo branco e letra preta, se for Santos 
+   "Salve o Tricolor paulista" -> com fundo preto e letra vermelha, se for São Paulo -->

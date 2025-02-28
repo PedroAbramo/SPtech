@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado eleição</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Resultado das eleições</h1>
+    <p>Quantidade de votos do candidato A</p>
+    <input type="number" id="ipt_votosA">
+    <p>Quantidade de votos do candidato B</p>
+    <input type="number" id="ipt_votosB">
+    <p>Quantidade de votos brancos </p>
+    <input type="number" id="ipt_votosBranco">
+    <p>Quantidade de votos nulos</p>
+    <input type="number" id="ipt_votosNulos">
+    <br><br>
+    <button onclick="calculo()"><b>Resultado da Eleição</b></button>
+    <div id="div_Resultado"></div>
+    <br><br>
+    <img src="https://moodle.sptech.school/pluginfile.php/1/core_admin/logocompact/300x300/1739026086/logo-vazado-para-video.png"
+        style="opacity: 0.5; display: block; margin: 0 auto;" alt="Logo SPtech">
+
+</body>
+
+</html>
+
+<script>
+
+    function calculo() {
+        var totalVotos = Number(ipt_votosA.value) + Number(ipt_votosB.value) + Number(ipt_votosBranco.value) + Number(ipt_votosNulos.value)
+        var candidatoA = Number(ipt_votosA.value) / (totalVotos) * 100
+        var candidatoB = Number(ipt_votosB.value) / (totalVotos) * 100
+        var votosInválidos = Number(ipt_votosBranco.value) + Number(ipt_votosNulos.value)
+        var Pinválidos = votosInválidos / totalVotos * 100
+
+
+        div_Resultado.innerHTML = `Total de votos: ${totalVotos} </br>
+    candidato A: ${candidatoA.toFixed(1)}% (${ipt_votosA.value}) </br>
+    candidato B: ${candidatoB.toFixed(1)}% (${ipt_votosB.value}) </br>
+    Inválidos: ${Pinválidos.toFixed(1)}% (${votosInválidos})`
+    }
+
+</script>

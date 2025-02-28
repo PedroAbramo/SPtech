@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Informe o número de chocolates comprados</p>
+    <input type="number" name="" id="ipt_Nchocolates">
+    <button onclick="calculo()">Compra</button>
+    <br><br>
+    <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+function calculo(){
+    var chocolates = Number(ipt_Nchocolates.value)
+    var precoBruto = chocolates * 3
+    var precoDesconto = chocolates * 2.50
+                    if(chocolates >= 12){
+                   mensagem.innerHTML = `O valor da sua compra foi de R$${precoDesconto}`
+                    }
+                    else{
+                   mensagem.innerHTML = `O valor da sua compra foi de R$${precoBruto}`
+                }
+    }
+       
+
+</script>

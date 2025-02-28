@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <p>Informe o valor da passagem de ônibus</p>
+        <input type="number" id="ipt_valorOnibus">
+        <p>Informe a quantidade de viagens que o usuário faz por mês</p>
+        <input type="number" id="ipt_quantviagens">
+        <p>Informe a distância do trabalho até sua casa em km</p>
+        <input type="number" id="ipt_dist_trabalho">
+        <br><br>
+        <button onclick="calculo()"><b>Calcular VT</b></button>
+        <br>
+        <div id="mensagem"></div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function calculo() {
+        var viagensAPP = Number(ipt_quantviagens.value) * 0.1
+        var valorAPP = viagensAPP * (Number(ipt_dist_trabalho.value) * 0.75)
+        var gastoONIBUS = Number(ipt_quantviagens.value) * 2 * Number(ipt_valorOnibus.value)
+        var gastoMensal = gastoONIBUS + valorAPP
+        mensagem.innerHTML = `Você vai gastar R$ ${gastoMensal} por mês com transporte`
+    }
+
+</script>

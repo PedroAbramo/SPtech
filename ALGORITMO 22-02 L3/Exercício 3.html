@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Bilhete Único</title>
+</head>
+
+<body>
+
+    <h1>Economia com bilhete Único</h1>
+    <p>Informe o <b>valor da passagem:</b></p>
+    <input type="number" id="ipt_valorpassagem">
+    <p>Informe o <b>número de viagens mensais:</b></p>
+    <input type="number" id="ipt_vmensais">
+    <br><br>
+    <button onclick="Economia()">Ver economia</button>
+
+</body>
+
+</html>
+
+<script>
+    function Economia() {
+        const valorestudante = (ipt_valorpassagem.value / 2)
+        const valoreconomizado = (valorestudante * ipt_vmensais.value)
+        alert(`Você economizará R$${valoreconomizado} por mês!`)
+    }
+
+
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Médias</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><b>Cálculo da Média na SPTech</b></h1>
+    <p>Informe a nota da avaliação <b>continuada</b>:</p>
+    <input type="number" name="" id="ipt_continuada">
+    <p>Informe a nota de <b>Pesquisa e Inovação</b>:</p>
+    <input type="number" name="" id="ipt_pi">
+    <p>Informe o nome do <b>aluno</b>:</p>
+    <input type="text" name="" id="ipt_aluno">
+    <br><br>
+    <button onclick="calculo()"><b>Calcular média</b></button>
+    <br>
+    <div id="mensagem"></div>
+
+ 
+
+</body>
+
+</html>
+
+<script>
+    function calculo(){
+var media = ((ipt_continuada.value) * 0.4) + (ipt_pi.value * 0.6)
+mensagem.innerHTML = `A média de ${ipt_aluno.value} será de <b>${media}</b>`
+    }   
+</script>

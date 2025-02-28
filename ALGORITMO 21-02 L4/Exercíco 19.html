@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Informe a temperatura do ambiente:</p>
+    <input type="number" name="" id="ipt_temperatura">
+        <br><br>
+    <button onclick="calculo()">Verificar clima</button>
+    <div id="div_imagem"></div>
+</body>
+</html>
+<script>
+    function calculo(){
+        var temperatura = Number(ipt_temperatura.value)
+        if(temperatura < 10 ){
+            div_imagem.innerHTML = `<img src="https://www.iped.com.br/_upload/content/2015/03/03/identificar-alimentos-bom-estado.jpg" alt="alimento estragado">`
+        } else{
+            div_imagem.innerHTML = `<img src="https://static1.minhavida.com.br/articles/59/12/a7/14/gettyimages-1268330880-orig-1.jpg" alt="alimento em bom estado">`
+        }
+    }
+</script>

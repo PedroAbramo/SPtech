@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoescola</title>
+</head>
+<body>
+    
+    <p>Qual o seu nome?</p>
+    <input type="text" id="ipt_nome">
+
+    <p>qual a sua idade?</p>
+    <input type="number" id="ipt_idade">
+
+    <button onclick="calculo()">Avaliar Aluno</button>
+
+    <div id="texto"></div>
+
+</body>
+</html>
+<script>
+    function calculo(){
+        var ida = Number(ipt_idade.value);
+        var nome = ipt_nome.value;
+
+        if(ida>=18){
+            texto.innerHTML = `${nome}, vamos tirar a CNH?`
+        }
+        else{
+            texto.innerHTML = `${nome}, vai jogar PlayStation!`
+        }
+    }
+</script>

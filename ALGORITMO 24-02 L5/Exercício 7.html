@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de Calorias</title>
+</head>
+
+<body>
+    <p>Informe a quantidade de pães franceses você come por dia:</p>
+    <input type="number" name="" id="ipt_pao">
+
+        <p>Informe a quantidade de pacotes de bolachas que você come por dia:</p>
+        <input type="number" name="" id="ipt_bolacha">
+
+            <p>Informe a quantos copos de achocolatado você toma por dia:</p>
+            <input type="number" name="" id="ipt_achocolatado"> 
+            <br><br>
+
+                <button onclick="calculo()">Verificar calorias</button>
+                <br><br>
+                <div id="div_mensagem"></div>
+</body>
+
+</html>
+
+<script>
+    function calculo(){
+        var pao = Number(ipt_pao.value) * 50
+        var bolacha = Number(ipt_bolacha.value) * 80
+        var achocolatado = Number(ipt_achocolatado.value) * 70
+        var calorias = pao + bolacha + achocolatado
+
+        if(calorias < 200){div_mensagem.innerHTML = `Parabéns, vai ficar em forma!`}
+            else if (calorias <= 400){div_mensagem.innerHTML = `Cuidado vai ficar menos saudável!`}
+                else {div_mensagem.innerHTML = `Alerta crítico de saúde!!!`}
+    }
+</script>
+
+<!-- Considere que um pão francês tem 50 calorias, um pacote de bolacha, 80 e um copo de achocolatado, 70.  -->

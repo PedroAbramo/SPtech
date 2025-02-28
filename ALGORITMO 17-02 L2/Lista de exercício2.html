@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de peso e altura</title>
+</head>
+
+<h1>Calculadora de <u>Peso</u> e <u>Altura</u></h1>
+
+<body>
+
+    <p>Digite seu <b>peso</b>:</p>
+    <input id="ipt_peso"/>
+
+    <p>Digite sua <b>altura</b>:</p>
+    <input id="ipt_altura"/>
+    
+    <br>
+    <br>
+    <button onclick="exibirMensagem()">Fale Comigo!</button>
+
+</body>
+
+<img src="https://moodle.sptech.school/pluginfile.php/1/core_admin/logocompact/300x300/1739026086/logo-vazado-para-video.png" style="opacity: 0.5; display: block; margin: 0 auto;" alt="Logo SPtech">
+
+</html>
+
+<script>
+    function exibirMensagem(){
+        alert("Você pesa " + ipt_peso.value + "Kg e tem " + ipt_altura.value + " m de altura");
+        }
+</script>

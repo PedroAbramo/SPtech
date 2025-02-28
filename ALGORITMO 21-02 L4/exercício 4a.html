@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor pizza</title>
+</head>
+<body>
+    <p>Informe o valor da pizza:</p>
+    <input type="number" name="" id="ipt_valorpizza">
+    <p>Informe a quantidade de amigos reunidos:</p>
+    <input type="number" name="" id="ipt_namigos">
+    <br><br>
+    <button onclick="calculo()"><b>Rola pizza?</b></button>
+    <br><br>
+<div id="mensagem"></div>
+
+
+</body>
+</html>
+<script>
+function calculo()
+{
+    var valorAmigo = (Number(ipt_valorpizza.value) / Number(ipt_namigos.value))
+    mensagem.innerHTML = `Cada amigo vai pagar R$${valorAmigo.toFixed(2)} pela pizza`
+
+    if (valorAmigo > 20)
+    {mensagem.innerHTML +=`<br><span style='color:red'> <b><i>Deu ruim! Pizza muito cara!</i></b>`}
+}
+
+</script>

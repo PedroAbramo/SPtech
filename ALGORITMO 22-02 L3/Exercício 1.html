@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aposentadoria</title>
+
+</head>
+
+<body>
+
+    <h1>Aposentadoria: Quanto Falta?</h1>
+    <h2>Aposentadoria Homem</h2>
+    <input type="number" id="ipt_idadehomem">
+    <button onclick="SubtrairHomem()">Aposentadoria Homem</button>
+
+    <h2>Aposentadoria Mulher</h2>
+    <input type="number" id="ipt_idademulher">
+    <button onclick="SubtrairMulher()">Aposentadoria Mulher</button>
+
+</body>
+
+<script>
+    function SubtrairHomem() {
+        const idade = ipt_idadehomem.value;
+        if (idade >= 70) {
+            alert(`Você já está aposentado, aproveite a vida meu bom senhor!`)
+        }
+        else {
+            alert(`Faltam ${70 - idade} anos para você se aposentar`)
+        }
+
+    };
+
+    // `` é usado para criar strings formatáveis, com variáveis dentro dela. Para defintir o que é a variável usar ${variável} 
+
+    // const é uma variável constante, não muda independente do que acontecer
+
+    // SHIFT + ALT + F = Organiza o código 
+
+    function SubtrairMulher() {
+        const idade = ipt_idademulher.value;
+        if (idade >= 60) {
+            alert(`Você já está aposentada, aproveite a vida minha boa senhora!`)
+        }
+        else {
+            alert(`Faltam ${60 - idade} anos para você se aposentar!`)
+        }
+
+    };
+
+</script>
+
+</html>

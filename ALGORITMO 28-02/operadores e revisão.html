@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="somar()">Somar</button>
+    <input type="number" name="" id="ipt_valor">
+    <div id="div_mensagem"></div>
+</body>
+
+</html>
+
+<script>
+    var contador = 0
+    
+
+    /*function somar(){     // colocando a variavel em cima da função, o valor irá aumentar a cada vez que o botão for pressionado
+        contador = contador + 1;
+        alert(contador);
+    }*/
+
+    /*function somar(){     
+        contador++; // o "++" é um operador unário
+        div_mensagem.innerHTML = `Contador: ${contador}`;
+    }*/
+
+    /*function somar(){    
+        contador **= 2; // "**" elevado ao número
+        div_mensagem.innerHTML = `Contador: ${contador}`;
+    }*/
+
+   /* function somar(){     // o "%" exibirá o resto da divisão, não o resultado dela
+    div_mensagem.innerHTML = `Contador: ${++contador}`;
+        if (contador % 2 == 0) {                          // se o resto da divisão for igual a 0 numero par, se não, número impar
+            div_mensagem.innerHTML += `<br>Número par`;}
+            else {div_mensagem.innerHTML += `<br> Número impar`}
+    }*/
+
+    function somar(){   
+        var valor = Number(ipt_valor.value)  
+    contador += valor;
+    div_mensagem.innerHTML = `Contador: ${contador}`;
+        if (contador % 2 == 0) {                         
+            div_mensagem.innerHTML += `<br>Número par`;}
+            else {div_mensagem.innerHTML += `<br> Número impar`}
+    }
+
+    // operadores unários
+    // ++, --
+
+    // operadores aritméticos
+    // +, -, *, /, **, %
+
+    // operadores de comparação
+    // >=, <=, >, <, ==, !=                   // "!="" significa diferente
+
+
+    // "!" na frente inverte o valor logo
+    // (true) = true e (!true) = false 
+
+
+
+
+
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saiyajin</title>
+</head>
+<body>
+    <h1>Transformações Saiyajin e Poder de Luta</h1>
+    <p>Qual o seu ki base do guerreiro Saiyajin?</p>
+    <input type="number" id="ipt_ki">
+    <p>Transformar em...</p>
+    <button onclick="kiSJ()">SSJ</button>
+    <button onclick="kiS2()">SSJ2</button>
+    <button onclick="kiS3()">SSJ3</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+    function kiSJ() {
+        var kiPoder = Number(ipt_ki.value)
+        div_resultado.innerHTML = `Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${kiPoder * 50}`
+    }
+    function kiS2() {
+        var kiPoder = Number(ipt_ki.value)
+        div_resultado.innerHTML = `Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${kiPoder * 100}`
+    }
+    function kiS3() {
+        var kiPoder = Number(ipt_ki.value)
+        div_resultado.innerHTML = `Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${kiPoder * 200}`
+    }
+</script>

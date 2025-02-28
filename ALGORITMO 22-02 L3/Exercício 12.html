@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+</head>
+<body>
+<h2>Divisão Justa da Pizza (Com 10% Gorjeta)</h2>
+    <p>Informe o <b>sabor</b> da pizza:</p>
+    <input type="text" id="ipt_sabor">
+    <p>Informe o <b>preço</b> da pizza:</p>
+    <input type="number" id="ipt_preço">
+    <p>Informe a <b>quantidade</b> de amigos que vão comer:</p>
+    <input type="number" id="ipt_numAmigos">
+    <br><br>    
+    <button onclick="valorpizza()"><b>Ver valor por amigo! </b></button>
+    <div id="exibir"></div>
+
+
+</body>
+</html>
+<script>
+    function valorpizza(){
+        var valor10P = Number(ipt_preço.value) * 1.1 
+        var valorAmigo = valor10P / Number(ipt_numAmigos.value)
+        exibir.innerHTML = ` <br> Cada amigo vai colaborar com R$${valorAmigo.toFixed(1)} para a pizza de ${ipt_sabor.value}.`
+    }
+</script>

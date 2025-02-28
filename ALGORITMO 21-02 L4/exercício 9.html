@@ -1,0 +1,38 @@
+<!-- a) Peça ao usuário para informar a última série (SITCOM) que ele assistiu 
+
+b) Peça ao usuário para informar o total de episódios que ele já assistiu da série 
+
+c) Tenha um botão "Verificar nível" que exiba abaixo dele a seguinte frase:  
+
+     "Vejo que você gosta da série X"   
+
+E se o usuário já gastou mais de 30 horas na série informada, exiba também: "Uau, você realmente gosta dessa série!".  
+
+Obs: Considere 22min como o tempo de duração de 1 episódio. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Informe a última série (SITCOM) que você assistiu:</p>
+    <input type="text" id="ipt_serie">
+    <p>Informe o total de episódios assistidos</p>
+    <input type="number" name="" id="ipt_totalepisodios">
+    <br><br>
+    <button onclick="calculo()"><b>Verificar nível</b></button>
+    <br><br>
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+    function calculo(){
+    var tempo = ((Number(ipt_totalepisodios.value) * 22) / 60)
+        mensagem.innerHTML = `Vejo que você gosta da série ${ipt_serie.value}!`
+    if (tempo > 30){
+        mensagem.innerHTML += `<br> Uau, você realmente gosta dessa série!`
+                   }
+    }
+</script>

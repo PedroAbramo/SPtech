@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="ipt_idade">
+    <button onclick="exibirMensagem()">Exibir Mensagem</button>
+</body>
+</html>
+<script>
+    function exibirMensagem(){
+/* O "==" é usado para comparação */
+if(ipt_idade.value == "")
+        alert("A input está vazia");
+else{
+
+    var idade = Number(ipt_idade.value);
+if (idade >= 18) {
+    alert("Já pode dirigir");
+}
+else {
+    alert("Ainda não pode dirigir")
+}
+    alert("Fim do programa");
+    }
+}
+</script>
